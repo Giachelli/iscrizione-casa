@@ -23,7 +23,7 @@ app.controller('DemoCtrl', ['$scope', '$mdDialog', '$element', function($scope,$
     var myDatePicker = angular.element($element[0].querySelector('#myDatePicker'));
     var myDatePickerInputContainer = angular.element(myDatePicker[0].children[1]);
     var myDatePickerInput = angular.element(myDatePickerInputContainer[0].children[0]);
-    myDatePickerInput.attr("name", "Data di arrivo"); 
+    myDatePickerInput.attr("name", "Data di inizio"); 
     
     //il pezzo di codice seguente mi aggiunge l'attributo name al datePicker di fine
     var myDatePicker_1 = angular.element($element[0].querySelector('#myDatePicker_1'));
