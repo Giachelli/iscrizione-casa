@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1" />
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <script src="https://use.fontawesome.com/924a0597bb.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body ng-app="inputBasicDemo" ng-controller="DemoCtrl">
+        <div class="sfondo" layout-sm="row" layout="row" layout-padding ng-cloak><br/>
+	        <md-card flex-xs="95" flex="100">
+	            <md-card-title>
+	                <md-toolbar hide-xs	 class="md-theme-light">
+                        <h2  class="md-toolbar-tools">
+                        	<span>Compila o scarica il form per Facebook cliccando il bottone a destra</span>
+                    	</h2>
+                    </md-toolbar>
+
+                    
+                    <md-toolbar hide-gt-xs>
+						<div class="md-toolbar-tools">
+<!-- 							<md-truncate style="position: absolute; left: 90px; right: 170px; top: 13px; bottom: 13px;">Toolbar with Standard Buttons</md-truncate> -->
+							<div flex-xs="80">
+							<span>Compila o scarica il form per Fb</span>
+							</div>
+							<md-button class="md-fab md-mini" aria-label="Favorite">
+								<md-icon><i class="material-icons">file_download</i></md-icon>
+							</md-button>
+      					</div>
+	  				</md-toolbar>
+                    
+                    
+<!--
+                    <md-card-title-text>
+                        <span class="md-headline">Compila il form per iscrivere la tua casa o clicca il bottone per scaricare il form per il messaggio Facebook</span>
+                        <span class="md-subhead"></span>
+                    </md-card-title-text>
+-->
+                </md-card-title>
+                <md-card-content>
+                	<div layout-xs="row"  layout-sm="row" layout="row"> <!-- c'era un layout-margin che ho sempre utilizzato da pc ma che da mobile è convenuto levare -->
+	            	    <div flex-xs="100" flex-sm="50" flex-md="50" flex="50" layout-xs="column" layout-sm="column" layout-md="column" layout="column" layout-align="start">
+                	        <form action="mailto:info@lensooni.it" method="post" enctype="text/plain">
+	            	        	<div layout-xs="column" layout-sm="row" layout="row">
+		     						<md-input-container flex="65" flex-xs="100" flex-sm="100" flex-md="100" class="md-icon-float md-block">
+										<!-- Use floating label instead of placeholder -->
+										<label flex-offset="5">Nome e cognome</label>
+               	                 		<md-icon><i class="name material-icons md-36">person</i></md-icon>
+               	            			<input flex-offset="5"name="Name" ng-model="user.name" type="text" ng-required="true">
+									</md-input-container>
+		      	            	</div>
+	            	       
+                		    	<div layout-xs="column" layout="row">    
+									<md-input-container md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+										<label flex-offset="5">Citta</label>
+										<md-icon><i class="location material-icons md-36">location_city</i></md-icon>
+										<input flex-offset="5" name="Citta" ng-model="user.citta" type="text" ng-required="true">
+									</md-input-container>
+                		    	</div>
+                		    
+								<div layout-xs="column" layout="row">
+									<md-input-container md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+									<!--Use floating placeholder instead of label -->
+									    <label flex-offset="5">Email Universitaria</label>
+										<md-icon class="email"><i class="mail material-icons md-36">email</i></md-icon>
+										<input flex-offset="5" name="Email Universitaria" ng-model="user.email" type="email" ng-required="true">
+									</md-input-container>
+                		    	</div>
+                	        
+								<div layout="row" flex-xs="100" flex="100" flex-md="100"> 
+									<div layout-xs="column" layout-sm="column" layout-md="column" layout="column" flex-xs="40" flex-md="35" flex="30">
+	            	    	    		<span flex-xs="10" flex-sm="30" flex-md="30" flex="30">Posti da condividere:</span>
+										<md-icon flex-xs="10"><i class="material-icons md-36 bed">airline_seat_individual_suite</i></md-icon>
+									</div>
+									<div layout-xs="column" layout-sm="row" layout-md="row" flex-offset-xs="10" flex-md="65" flex="70" layout="row">
+										<md-input-container flex-xs="10" flex-offset-sm="5" flex-offset-md="5" flex-sm="30" flex-md="30" flex="20">
+                	                		<label>Letto</label>
+											<md-select name="Posti letto" ng-model="numPostiLetto">
+                	                    		<md-option><em>Nessuno</em></md-option>
+												<md-option ng-repeat="numero in numeri" ng-value="numero">
+												{{numero}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+										<md-input-container flex-xs="10" flex-sm="40" flex-md="40" flex="25">
+                	                		<label>Divano</label>
+											<md-select name="Posti divano" ng-model="numPostiDivano">
+                	                    		<md-option><em>Nessuno</em></md-option>
+												<md-option ng-repeat="numero in numeri" ng-value="numero">
+												{{numero}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+										<md-input-container flex-xs="10" flex-sm="40" flex-md="40" flex="25">
+                	                		<label>Per terra</label>
+											<md-select name="Posti per terra" ng-model="numPostiTerra">
+                	                    		<md-option><em>Nessuno</em></md-option>
+												<md-option ng-repeat="numero in numeri" ng-value="numero">
+												{{numero}}
+												</md-option>
+											</md-select>
+										</md-input-container>
+									</div>
+                		    	</div>
+						    
+								<div layout-xs="column" layout-sm="row" layout="row">					        
+									<div layout-xs="column" layout-sm="column" layout-md="column" layout="column" flex-xs="100" flex-sm="40" flex="40">
+										<p flex="15">Data inizio</p>
+										<md-datepicker id="myDatePicker" ng-disabled="disponibilita!='Nessuno'" ng-model="myDate" md-placeholder="Data inizio" md-open-on-focus></md-datepicker>
+                	        
+										<p flex="15">Data fine</p>
+										<md-datepicker id="myDatePicker_1" ng-disabled="disponibilita!='Nessuno'" ng-model="minDate" md-placeholder="Data fine"
+                	            md-min-date="minDate">
+                	            		</md-datepicker>
+                	        		</div>
+                	        
+                	                <div flex-xs="100" flex-sm="70" flex-md="70"flex="50" layout-xs="row" layout="row">
+										<md-input-container flex-xs="85" flex-sm="80" flex-md="80" flex="80">
+                	                		<label>Disponibilita permanente</label>
+											<md-select name="Data di disponibilita" ng-model="disponibilita">
+                	                    		<md-option><em>Nessuno</em></md-option>
+												<md-option ng-repeat="possibilita in possibilities" ng-value="possibilita">
+												{{possibilita}}
+												</md-option>
+												</md-select>
+										</md-input-container>
+										<div flex-xs="15" flex-sm="20" flex-md="20" flex="20">
+											<md-button ng-click="showAlert_questionMark($event)"class="md-fab-question-mark md-mini-question-mark" aria-label="Mini Question Mark">
+												<md-icon><i class="fa fa-question-circle-o euro" aria-hidden="true"></i>
+												</md-icon>
+											</md-button>
+										</div>
+									</div>
+						    	</div>   
+						        				        
+								<div>
+                	            	<h1 class="md-title">Tag con cui vuoi essere trovato</h1>
+									<div layout-xs="row" layout-sm="row" layout="row">
+										<md-input-container>
+									    	<md-icon><i class="tag fa fa-hashtag" aria-hidden="true"></i></md-icon>
+											<label>Tags</label>
+											<md-select name="Tag" ng-model="selectedTags" multiple>
+												<md-optgroup label="Serata">
+													<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'serata' }">{{tag.name}}
+													</md-option>
+												</md-optgroup>
+												<md-optgroup label="Università">
+													<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'universita' }">{{tag.name}}
+													</md-option>
+												</md-optgroup>
+											</md-select>
+										</md-input-container>
+    								</div>
+									<p ng-if="selectedTags"> Tag : {{printSelectedTags()}}</p>
+  								</div>
+						        
+<!--				
+                	        <md-input-container md-no-float class="md-block">
+                	            <input ng-model="user.address" type="text" placeholder="Address" >
+                	            <md-icon style="display:inline-block;"></md-icon>
+                	        </md-input-container>
+-->						 
+                	        	<div layout-xs="column" layout-sm="row" layout="row">
+	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo a letto</span>
+	            	            	<div layout-xs="row">
+										<md-slider-container flex-xs>
+											<md-slider ng-disabled="numPostiLetto=='Nessuno'" min="0" max="15" ng-model="color.red" aria-label="red" id="red-slider">
+											</md-slider>
+											<md-input-container flex-xs flex-sm="15" flex="15">
+												<input ng-disabled="numPostiLetto=='Nessuno'" name="Prezzo a letto" type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+											</md-input-container>
+											<div flex-xs>
+												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
+											</div>
+										</md-slider-container>
+					    			</div>
+                	        	</div>
+                	        
+								<div layout-xs="column" layout-sm="row" layout="row">
+	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo a divano</span>
+	            	            	<div layout-xs="row">
+										<md-slider-container flex-xs>
+						            		<md-slider  ng-disabled="numPostiDivano=='Nessuno'" min="0" max="10" ng-model="color.green" aria-label="green" id="green-slider">
+											</md-slider>
+											<md-input-container flex-xs flex-sm="15" flex="15">
+                	                    		<input ng-disabled="numPostiDivano=='Nessuno'" type="number" name="Prezzo a divano" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+											</md-input-container>
+											<div flex-xs>
+												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
+											</div>
+									    </md-slider-container>
+                	        	    </div>
+								</div>
+                	        
+								<div layout-xs="column" layout-sm="row" layout="row">
+	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo per terra</span>
+	            	            	<div layout-xs="row">
+										<md-slider-container flex-xs>
+						            		<md-slider ng-disabled="numPostiTerra=='Nessuno'" min="0" max="5" ng-model="color.blue" aria-label="blue" id="blue-slider">
+											</md-slider>
+											<md-input-container flex-xs flex-sm="15" flex="15">
+                	                    		<input  ng-disabled="numPostiTerra=='Nessuno'" type="number" name="Prezzo per terra" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+											</md-input-container>
+											<div flex-xs>
+												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
+											</div>
+										</md-slider-container>
+                	        		</div>
+                	        	</div>
+                	        
+								<div layout-xs="row" layout="row">
+	            	            	<span flex-xs="20" flex-sm="20" flex="20">Numero coinquilini: </span>
+									<md-input-container flex-offset-xs="30" flex-offset="5" flex-xs="70" flex-sm="35" flex-md="25" flex="20">
+                	                	<label>Numero</label>
+										<md-select ng-required="true" name="Numero coinquilini" ng-model="numCoinquilini">
+                	                    	<md-option><em>Nessuno</em></md-option>
+											<md-option ng-repeat="numero in numeri" ng-value="numero">
+											{{numero}}
+											</md-option>
+										</md-select>
+									</md-input-container>
+                	        	</div>
+                	        
+								<div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="end">
+                	        		<md-button class="invia md-raised" ng-mouseover="showAlert($event)" type="submit">Invia</md-button>   
+                	        	</div>
+                	        
+                	                       
+                	            
+<!--				
+                	<md-input-container class="md-icon-float md-icon-right md-block">
+                	    <label>Donation Amount</label>
+                	    <md-icon md-svg-src="bower_components/material-design-icons/image/svg/design/ic_card_giftcard_24px.svg"></md-icon>
+                	    <input ng-model="user.donation" type="number" step="0.01">
+                	    <md-icon md-svg-src="img/icons/ic_euro_24px.svg"></md-icon>
+                	</md-input-container>
+-->					
+            				</form>
+	            	    </div>
+	            	    <div hide-xs flex="50">
+		        	        <div flex-offset="60">
+			        	        <a href="https://drive.google.com/file/d/1upTAxP50Zn2pQLRqVzKD0Bzof6i67ObK/view?usp=sharing">
+		        	        	<md-button class="md-fab-1" aria-label="Eat cake" ng-mouseover="showAlert_1($event)">
+                	            	<md-icon><i class="material-icons">file_download</i></md-icon>
+								</md-button>
+			        	        </a>
+		        	        </div>
+                	    </div>
+                	</div>
+				</md-card-content>
+			</md-card>
+        </div>
+	</body>
+</html>
+<!-- <i class="material-icons">done</i> -->
+<!--
+            <form method="get" action="https://drive.google.com/open?id=0B0p6wznf-Klhc0dvQzZsZW1BdXM">
+   <button type="submit">Download!</button>
+</form>
+            <a href="https://drive.google.com/file/d/1upTAxP50Zn2pQLRqVzKD0Bzof6i67ObK/view?usp=sharing">Provaz</a>
+-->
+<!-- <i class="material-icons">airline_seat_individual_suite</i>  icona per il posto disponibile-->
+
+<!-- <i class="material-icons">group</i> icona per i coinquilini-->
+
+<!-- <i class="fa fa-question-circle-o" aria-hidden="true"> question mark da aggiungere vicino a disponibilità</i> -->

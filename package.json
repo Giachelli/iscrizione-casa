@@ -1,0 +1,22 @@
+{
+  "name": "iscrizione-casa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giachelli/iscrizione-casa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giachelli/iscrizione-casa/issues"
+  },
+  "homepage": "https://github.com/Giachelli/iscrizione-casa#readme",
+  "dependencies": {
+    "bower": "^1.8.2"
+  }
+}
