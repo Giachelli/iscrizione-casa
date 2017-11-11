@@ -139,11 +139,11 @@
 						        				        
 								<div>
                 	            	<h1 class="md-title">Tag con cui vuoi essere trovato</h1>
-									<div layout-xs="row" layout-sm="row" layout="row">
-										<md-input-container>
+									<div layout-xs="row" layout-sm="row" layout="row" flex="50">
+										<md-input-container class="md-block" flex="100">
 									    	<md-icon><i class="tag fa fa-hashtag" aria-hidden="true"></i></md-icon>
 											<label>Tags</label>
-											<md-select name="Tag" ng-model="selectedTags" multiple>
+											<md-select class="no-padding" name="Tag" ng-model="selectedTags" multiple>
 												<md-optgroup label="Serata">
 													<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'serata' }">{{tag.name}}
 													</md-option>
