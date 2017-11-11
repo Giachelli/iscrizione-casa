@@ -163,14 +163,14 @@
                 	            <md-icon style="display:inline-block;"></md-icon>
                 	        </md-input-container>
 -->						 
-                	        	<div layout-xs="column" layout-sm="row" layout="row">
+                	        	<div ng-hide="numPostiLetto=='Nessuno'" layout-xs="column" layout-sm="row" layout="row">
 	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo a letto</span>
 	            	            	<div layout-xs="row">
 										<md-slider-container flex-xs>
-											<md-slider ng-disabled="numPostiLetto=='Nessuno'" min="0" max="15" ng-model="color.red" aria-label="red" id="red-slider">
+											<md-slider min="0" max="15" ng-model="color.red" aria-label="red" id="red-slider">
 											</md-slider>
 											<md-input-container flex-xs flex-sm="15" flex="15">
-												<input ng-disabled="numPostiLetto=='Nessuno'" name="Prezzo a letto" type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
+												<input name="Prezzo a letto" type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
 											</md-input-container>
 											<div flex-xs>
 												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
@@ -179,14 +179,14 @@
 					    			</div>
                 	        	</div>
                 	        
-								<div layout-xs="column" layout-sm="row" layout="row">
+								<div ng-hide="numPostiDivano=='Nessuno'" layout-xs="column" layout-sm="row" layout="row">
 	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo a divano</span>
 	            	            	<div layout-xs="row">
 										<md-slider-container flex-xs>
-						            		<md-slider  ng-disabled="numPostiDivano=='Nessuno'" min="0" max="10" ng-model="color.green" aria-label="green" id="green-slider">
+						            		<md-slider min="0" max="10" ng-model="color.green" aria-label="green" id="green-slider">
 											</md-slider>
 											<md-input-container flex-xs flex-sm="15" flex="15">
-                	                    		<input ng-disabled="numPostiDivano=='Nessuno'" type="number" name="Prezzo a divano" ng-model="color.green" aria-label="green" aria-controls="green-slider">
+                	                    		<input type="number" name="Prezzo a divano" ng-model="color.green" aria-label="green" aria-controls="green-slider">
 											</md-input-container>
 											<div flex-xs>
 												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
@@ -195,14 +195,14 @@
                 	        	    </div>
 								</div>
                 	        
-								<div layout-xs="column" layout-sm="row" layout="row">
+								<div ng-hide="numPostiTerra=='Nessuno'" layout-xs="column" layout-sm="row" layout="row">
 	            	            	<span flex="25" flex-xs="10" flex-sm="25">Prezzo per terra</span>
 	            	            	<div layout-xs="row">
 										<md-slider-container flex-xs>
-						            		<md-slider ng-disabled="numPostiTerra=='Nessuno'" min="0" max="5" ng-model="color.blue" aria-label="blue" id="blue-slider">
+						            		<md-slider min="0" max="5" ng-model="color.blue" aria-label="blue" id="blue-slider">
 											</md-slider>
 											<md-input-container flex-xs flex-sm="15" flex="15">
-                	                    		<input  ng-disabled="numPostiTerra=='Nessuno'" type="number" name="Prezzo per terra" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
+                	                    		<input type="number" name="Prezzo per terra" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
 											</md-input-container>
 											<div flex-xs>
 												<md-icon><i class="euro material-icons">euro_symbol</i></md-icon>
