@@ -162,9 +162,8 @@
 									</div>
 						    	</div>   
 						        				        
-								<div>
-									<div layout-xs="row" layout-sm="row" layout="row" flex="50">
-										<md-input-container class="md-block" flex="100">
+								<div layout-xs="column">
+										<md-input-container layout-xs="row" layout-sm="row" layout="row" flex="50" class="md-block">
 									    	<md-icon><i class="tag fa fa-hashtag" aria-hidden="true"></i></md-icon>
 											<label>Tags</label>
 											<md-select class="no-padding" name="Tag" ng-model="selectedTags" multiple>
@@ -178,7 +177,6 @@
 												</md-optgroup>
 											</md-select>
 										</md-input-container>
-    								</div>
 									<p ng-if="selectedTags"> Tag : {{printSelectedTags()}}</p>
   								</div>
 						        
