@@ -45,25 +45,25 @@
                 	<div layout-xs="row"  layout-sm="row" layout="row"> <!-- c'era un layout-margin che ho sempre utilizzato da pc ma che da mobile è convenuto levare -->
 	            	    <div flex-xs="100" flex-sm="50" flex-md="50" flex="50" layout-xs="column" layout-sm="column" layout-md="column" layout="column" layout-align="start">
                 	        <form action="mailto:info@lensooni.it?subject= Iscrizione casa" method="post" enctype="text/plain">
-		     						<md-input-container layout-xs="column" layout-sm="row" layout="row" flex="65" flex-xs="100" flex-sm="100" flex-md="100" class="md-icon-float md-block">
-										<!-- Use floating label instead of placeholder -->
-										<label flex-offset="5">Nome e cognome</label>
-               	                 		<md-icon><i class="name material-icons md-36">person</i></md-icon>
-               	            			<input flex-offset="5"name="Name" ng-model="user.name" type="text" ng-required="true">
-									</md-input-container>
+		     					<md-input-container layout-xs="column" layout-sm="row" layout="row" flex="65" flex-xs="100" flex-sm="100" flex-md="100" class="md-icon-float md-block">
+									<!-- Use floating label instead of placeholder -->
+									<label flex-offset="5">Nome e cognome</label>
+               	                	<md-icon><i class="name material-icons md-36">person</i></md-icon>
+               	            		<input flex-offset="5"name="Name" ng-model="user.name" type="text" ng-required="true">
+								</md-input-container>
 	            	       
-									<md-input-container layout-xs="column" layout="row" md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
-										<label flex-offset="5">Citta</label>
-										<md-icon><i class="location material-icons md-36">location_city</i></md-icon>
-										<input flex-offset="5" name="Citta" ng-model="user.citta" type="text" ng-required="true">
-									</md-input-container>
+								<md-input-container layout-xs="column" layout="row" md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+									<label flex-offset="5">Citta</label>
+									<md-icon><i class="location material-icons md-36">location_city</i></md-icon>
+									<input flex-offset="5" name="Citta" ng-model="user.citta" type="text" ng-required="true">
+								</md-input-container>
                 		    
-									<md-input-container md-no-float layout-xs="column" layout="row" flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
-									<!--Use floating placeholder instead of label -->
-									    <label flex-offset="5">Email Universitaria</label>
-										<md-icon class="email"><i class="mail material-icons md-36">email</i></md-icon>
-										<input flex-offset="5" name="Email Universitaria" ng-model="user.email" type="email" ng-required="true">
-									</md-input-container>
+								<md-input-container md-no-float layout-xs="column" layout="row" flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+								<!--Use floating placeholder instead of label -->
+								    <label flex-offset="5">Email Universitaria</label>
+									<md-icon class="email"><i class="mail material-icons md-36">email</i></md-icon>
+									<input flex-offset="5" name="Email Universitaria" ng-model="user.email" type="email" ng-required="true">
+								</md-input-container>
                 	        
 								<div layout="row" flex-xs="100" flex="100" flex-md="100"> 
 									<div layout-xs="column" layout-sm="column" layout-md="column" layout="column" flex-xs="40" flex-md="35" flex="30">
@@ -161,20 +161,20 @@
 						    	</div>   
 						        				        
 								<div layout-xs="column">
-										<md-input-container layout-xs="row" layout-sm="row" layout="row" flex="50" class="md-block">
-									    	<md-icon><i class="tag fa fa-hashtag" aria-hidden="true"></i></md-icon>
-											<label>Tags</label>
-											<md-select class="no-padding" name="Tag" ng-model="selectedTags" multiple>
-												<md-optgroup label="Serata">
-													<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'serata' }">{{tag.name}}
-													</md-option>
-												</md-optgroup>
-												<md-optgroup label="Università">
-													<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'universita' }">{{tag.name}}
-													</md-option>
-												</md-optgroup>
-											</md-select>
-										</md-input-container>
+									<md-input-container layout-xs="row" layout-sm="row" layout="row" flex="50" class="md-block">
+										<md-icon><i class="tag fa fa-hashtag" aria-hidden="true"></i></md-icon>
+										<label>Tags</label>
+										<md-select class="no-padding" name="Tag" ng-model="selectedTags" multiple>
+											<md-optgroup label="Serata">
+												<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'serata' }">{{tag.name}}
+												</md-option>
+											</md-optgroup>
+											<md-optgroup label="Università">
+												<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'universita' }">{{tag.name}}
+												</md-option>
+											</md-optgroup>
+										</md-select>
+									</md-input-container>
 									<p ng-if="selectedTags"> Tag : {{printSelectedTags()}}</p>
   								</div>
 						        
@@ -265,7 +265,7 @@
 		            	</div>
                 	</div>	            	    
 	            	<div hide-lg>
-                	    <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch style="border-color: #673AB7;border-style: groove;">
+                	    <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch style="border-color: #EF5350;border-style: groove;">
 					     <md-card-title>
 					        	<md-card-title-media>
 					     		<div class="md-media-sm card-media">
