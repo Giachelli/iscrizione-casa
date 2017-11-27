@@ -45,31 +45,25 @@
                 	<div layout-xs="row"  layout-sm="row" layout="row"> <!-- c'era un layout-margin che ho sempre utilizzato da pc ma che da mobile è convenuto levare -->
 	            	    <div flex-xs="100" flex-sm="50" flex-md="50" flex="50" layout-xs="column" layout-sm="column" layout-md="column" layout="column" layout-align="start">
                 	        <form action="mailto:info@lensooni.it?subject= Iscrizione casa" method="post" enctype="text/plain">
-	            	        	<div layout-xs="column" layout-sm="row" layout="row">
-		     						<md-input-container flex="65" flex-xs="100" flex-sm="100" flex-md="100" class="md-icon-float md-block">
+		     						<md-input-container layout-xs="column" layout-sm="row" layout="row" flex="65" flex-xs="100" flex-sm="100" flex-md="100" class="md-icon-float md-block">
 										<!-- Use floating label instead of placeholder -->
 										<label flex-offset="5">Nome e cognome</label>
                	                 		<md-icon><i class="name material-icons md-36">person</i></md-icon>
                	            			<input flex-offset="5"name="Name" ng-model="user.name" type="text" ng-required="true">
 									</md-input-container>
-		      	            	</div>
 	            	       
-                		    	<div layout-xs="column" layout="row">    
-									<md-input-container md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+									<md-input-container layout-xs="column" layout="row" md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
 										<label flex-offset="5">Citta</label>
 										<md-icon><i class="location material-icons md-36">location_city</i></md-icon>
 										<input flex-offset="5" name="Citta" ng-model="user.citta" type="text" ng-required="true">
 									</md-input-container>
-                		    	</div>
                 		    
-								<div layout-xs="column" layout="row">
-									<md-input-container md-no-float flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
+									<md-input-container md-no-float layout-xs="column" layout="row" flex-xs="100" flex-sm="100" flex-md="100" flex="65" class="md-block">
 									<!--Use floating placeholder instead of label -->
 									    <label flex-offset="5">Email Universitaria</label>
 										<md-icon class="email"><i class="mail material-icons md-36">email</i></md-icon>
 										<input flex-offset="5" name="Email Universitaria" ng-model="user.email" type="email" ng-required="true">
 									</md-input-container>
-                		    	</div>
                 	        
 								<div layout="row" flex-xs="100" flex="100" flex-md="100"> 
 									<div layout-xs="column" layout-sm="column" layout-md="column" layout="column" flex-xs="40" flex-md="35" flex="30">
