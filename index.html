@@ -133,13 +133,16 @@
 						    
 								<div hide-lg hide-md hide-sm layout-xs="column">					        
 									<div layout-xs="column" flex-xs="100">
-										<p flex-xs="15">Data inizio</p>
-										<md-datepicker id="myDatePicker" ng-disabled="disponibilita!='Nessuno'" ng-model="myDate" md-placeholder="Data inizio" md-open-on-focus></md-datepicker>
-                	        
-										<p flex-xs="15">Data fine</p>
-										<md-datepicker id="myDatePicker_1" ng-disabled="disponibilita!='Nessuno'" ng-model="minDate" md-placeholder="Data fine"
+										<div>
+											<h4>Data inizio</h4>
+											<md-datepicker id="myDatePicker" ng-disabled="disponibilita!='Nessuno'" ng-model="myDate" md-placeholder="Data inizio" md-open-on-focus></md-datepicker>
+										</div>
+                	                    <div>
+											<p flex-xs="15">Data fine</p>
+											<md-datepicker id="myDatePicker_1" ng-disabled="disponibilita!='Nessuno'" ng-model="minDate" md-placeholder="Data fine"
                 	            md-min-date="minDate">
-                	            		</md-datepicker>
+                	            			</md-datepicker>
+                	                    </div>
                 	        		</div>
                 	        
                 	                <div flex-xs="100" layout-xs="row">
