@@ -100,9 +100,9 @@
 										</md-input-container>
 									</div>
                 		    	</div>
-						    
-								<div layout-xs="column" layout-sm="row" layout="row">					        
-									<div layout-xs="column" layout-sm="column" layout-md="column" layout="column" flex-xs="100" flex-sm="40" flex="40">
+                		    	
+                		    	<div hide-xs layout-sm="row" layout="row">					        
+									<div layout-sm="column" layout-md="column" layout="column" flex-sm="40" flex="40">
 										<p flex="15">Data inizio</p>
 										<md-datepicker id="myDatePicker" ng-disabled="disponibilita!='Nessuno'" ng-model="myDate" md-placeholder="Data inizio" md-open-on-focus></md-datepicker>
                 	        
@@ -112,8 +112,8 @@
                 	            		</md-datepicker>
                 	        		</div>
                 	        
-                	                <div flex-xs="100" flex-sm="70" flex-md="70"flex="50" layout-xs="row" layout="row">
-										<md-input-container flex-xs="85" flex-sm="80" flex-md="80" flex="80">
+                	                <div flex-sm="70" flex-md="70"flex="50" layout="row">
+										<md-input-container flex-sm="80" flex-md="80" flex="80">
                 	                		<label>Disponibilita permanente</label>
 											<md-select name="Disponibilita permanente" ng-model="disponibilita">
                 	                    		<md-option><em>Nessuno</em></md-option>
@@ -122,7 +122,37 @@
 												</md-option>
 												</md-select>
 										</md-input-container>
-										<div flex-xs="15" flex-sm="20" flex-md="20" flex="20">
+										<div flex-sm="20" flex-md="20" flex="20">
+											<md-button ng-click="showAlert_questionMark($event)"class="md-fab-question-mark md-mini-question-mark" aria-label="Mini Question Mark">
+												<md-icon><i class="fa fa-question-circle-o euro" aria-hidden="true"></i>
+												</md-icon>
+											</md-button>
+										</div>
+									</div>
+						    	</div>
+						    
+								<div hide-lg hide-md hide-sm layout-xs="column">					        
+									<div layout-xs="column" flex-xs="100">
+										<p flex-xs="15">Data inizio</p>
+										<md-datepicker id="myDatePicker" ng-disabled="disponibilita!='Nessuno'" ng-model="myDate" md-placeholder="Data inizio" md-open-on-focus></md-datepicker>
+                	        
+										<p flex-xs="15">Data fine</p>
+										<md-datepicker id="myDatePicker_1" ng-disabled="disponibilita!='Nessuno'" ng-model="minDate" md-placeholder="Data fine"
+                	            md-min-date="minDate">
+                	            		</md-datepicker>
+                	        		</div>
+                	        
+                	                <div flex-xs="100" layout-xs="row">
+										<md-input-container flex-xs="85">
+                	                		<label>Disponibilita permanente</label>
+											<md-select name="Disponibilita permanente" ng-model="disponibilita">
+                	                    		<md-option><em>Nessuno</em></md-option>
+												<md-option ng-repeat="possibilita in possibilities" ng-value="possibilita">
+												{{possibilita}}
+												</md-option>
+												</md-select>
+										</md-input-container>
+										<div flex-xs="15">
 											<md-button ng-click="showAlert_questionMark($event)"class="md-fab-question-mark md-mini-question-mark" aria-label="Mini Question Mark">
 												<md-icon><i class="fa fa-question-circle-o euro" aria-hidden="true"></i>
 												</md-icon>
