@@ -118,3 +118,22 @@
   padding: 0 !important;
   margin: 0 !important;
 }
+
+.md-toolbar-tools a {
+    color: #fff;
+    font-size:large;
+    font-family: Rajdhani,sans-serif;
+    letter-spacing:1px;
+}
+
+.page-scroll {
+	text-decoration: none;
+	color: black;
+	font-size:large;
+	font-family: Rajdhani,sans-serif;
+}
+
+.white{
+	color:#fff;
+}
+
