@@ -3,7 +3,8 @@ app.controller('DemoCtrl', ['$scope', '$mdDialog', '$element', function($scope,$
     $scope.user = {
       name: '',
       email: '',
-      citta: ''
+      citta: '',
+      zona:''
     };
     
     $scope.numPostiLetto = 'Nessuno';
