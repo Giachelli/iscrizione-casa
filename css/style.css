@@ -1,34 +1,41 @@
 .inputdemoIcons .inputIconDemo {
-    min-height: 48px; }
-  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
-    color: green; }
-  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
-    color: dodgerblue; }
-  .inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
-  .inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
-    color: red; }
- 
- .md-button.md-fab-1{
-	 line-height: 7rem;
-	 height: 7rem;
-	 width: 7rem;
-	 z-index: 20;
-     min-width: 0;
-     vertical-align: middle;
-     box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-     border-radius: 50%;
-     background-clip: padding-box;
-     overflow: hidden;
-     -webkit-transition: all .3s cubic-bezier(.55,0,.55,.2);
-     transition: all .3s cubic-bezier(.55,0,.55,.2);
-     -webkit-transition-property: background-color,box-shadow,-webkit-transform;
-     transition-property: background-color,box-shadow,-webkit-transform;
-     transition-property: background-color,box-shadow,transform;
-     transition-property: background-color,box-shadow,transform,-webkit-transform;
-     background-color: #4CAF50;
- }
- 
- .md-button.md-fab-question-mark {
+    min-height: 48px
+}
+
+.inputdemoIcons md-input-container:not(.md-input-invalid)>md-icon.email {
+    color: green
+}
+
+.inputdemoIcons md-input-container:not(.md-input-invalid)>md-icon.name {
+    color: dodgerblue
+}
+
+.inputdemoIcons md-input-container.md-input-invalid>md-icon.email,
+.inputdemoIcons md-input-container.md-input-invalid>md-icon.name {
+    color: red
+}
+
+.md-button.md-fab-1 {
+    line-height: 7rem;
+    height: 7rem;
+    width: 7rem;
+    z-index: 20;
+    min-width: 0;
+    vertical-align: middle;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    border-radius: 50%;
+    background-clip: padding-box;
+    overflow: hidden;
+    -webkit-transition: all .3s cubic-bezier(.55, 0, .55, .2);
+    transition: all .3s cubic-bezier(.55, 0, .55, .2);
+    -webkit-transition-property: background-color, box-shadow, -webkit-transform;
+    transition-property: background-color, box-shadow, -webkit-transform;
+    transition-property: background-color, box-shadow, transform;
+    transition-property: background-color, box-shadow, transform, -webkit-transform;
+    background-color: #4CAF50
+}
+
+.md-button.md-fab-question-mark {
     z-index: 20;
     line-height: 56px;
     min-width: 0;
@@ -38,102 +45,99 @@
     border-radius: 50%;
     background-clip: padding-box;
     overflow: hidden;
-    -webkit-transition: all .3s cubic-bezier(.55,0,.55,.2);
-    transition: all .3s cubic-bezier(.55,0,.55,.2);
-    -webkit-transition-property: background-color,box-shadow,-webkit-transform;
-    transition-property: background-color,box-shadow,-webkit-transform;
-    transition-property: background-color,box-shadow,transform;
-    transition-property: background-color,box-shadow,transform,-webkit-transform;
-    background-color: white;
+    -webkit-transition: all .3s cubic-bezier(.55, 0, .55, .2);
+    transition: all .3s cubic-bezier(.55, 0, .55, .2);
+    -webkit-transition-property: background-color, box-shadow, -webkit-transform;
+    transition-property: background-color, box-shadow, -webkit-transform;
+    transition-property: background-color, box-shadow, transform;
+    transition-property: background-color, box-shadow, transform, -webkit-transform;
+    background-color: white
 }
 
 .md-button.md-fab-question-mark.md-mini-question-mark {
     line-height: 40px;
     width: 40px;
-    height: 40px;
-}
- 
- .sfondo{
-	 background-color: #424242
-	 }
-/*
-  .sfondo-card{
-	 background-color: #E53935
-
-  }
-*/
-
-.name{
-	color: #3F51B5;
-	}
-.material-icons.md-36 { 
-	font-size: 36px 
+    height: 40px
 }
 
-.euro{
-	color:#3F51B5;
+.sfondo {
+    background-color: #424242
 }
 
-.location{
-	color:#F44336;
-
+.name {
+    color: #3F51B5
 }
 
-.esclamation{
-	color:rgb(255,64,129);
+.material-icons.md-36 {
+    font-size: 36px
 }
 
-.mail{
-	color:#673AB7;
-
+.euro {
+    color: #3F51B5
 }
 
-.posti{
-	color: #FFFF00;
+.location {
+    color: #F44336
 }
 
-.md-select-value .md-select-icon:after{
-	color: #424242;
-}
-.bed{
-	color: #424242;
+.location-on {
+    color: #ff8a65
 }
 
-.tag{
-	color:#F44336;
+.esclamation {
+    color: rgb(255, 64, 129)
 }
 
-
-.md-button.md-default-theme.md-raised, .md-button.md-raised{
-	background-color: #4CAF50;
+.mail {
+    color: #673AB7
 }
 
-@media(max-width:600px){
-	scritta-input{
-		font-size: small; 
-	}
+.posti {
+    color: #FF0
+}
+
+.md-select-value .md-select-icon:after {
+    color: #424242
+}
+
+.bed {
+    color: #424242
+}
+
+.tag {
+    color: #F44336
+}
+
+.md-button.md-default-theme.md-raised,
+.md-button.md-raised {
+    background-color: #4CAF50
+}
+
+@media(max-width:600px) {
+    scritta-input {
+        font-size: small
+    }
 }
 
 .no-padding {
-  padding: 0 !important;
-  margin: 0 !important;
+    padding: 0!important;
+    margin: 0!important
 }
 
 .md-toolbar-tools a {
     color: #fff;
-    font-size:large;
-    font-family: Rajdhani,sans-serif;
-    letter-spacing:1px;
+    font-size: large;
+    font-family: Rajdhani, sans-serif;
+    letter-spacing: 1px
 }
 
 .page-scroll {
-	text-decoration: none;
-	color: black;
-	font-size:large;
-	font-family: Rajdhani,sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family: Rajdhani, sans-serif
 }
 
-.white{
-	color:#fff;
+.white {
+    color: #fff
 }
-
