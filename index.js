@@ -93,6 +93,8 @@ app.controller('DemoCtrl', ['$scope', '$mdDialog', '$element', function($scope,$
         { category: 'musica', name: 'Ambient'},
         { category: 'musica', name: 'Elettronica'},
         { category: 'musica', name: 'Indie'},
+        { category: 'musica', name: 'Punk'},
+        { category: 'musica', name: 'Italiana'},
         { category: 'musica', name: 'Classica'},
         { category: 'musica', name: "Rock '60"},
         { category: 'musica', name: "Rock '70"},
