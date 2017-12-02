@@ -225,6 +225,14 @@
 												<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'universita' }">{{tag.name}}
 												</md-option>
 											</md-optgroup>
+											<md-optgroup label="Interessi">
+												<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'interessi' }">{{tag.name}}
+												</md-option>
+											</md-optgroup>
+											<md-optgroup label="Musica">
+												<md-option ng-value="tag.name" ng-repeat="tag in tags | filter: {category: 'musica' }">{{tag.name}}
+												</md-option>
+											</md-optgroup>
 										</md-select>
 									</md-input-container>
 									<p ng-if="selectedTags"> Tag : {{printSelectedTags()}}</p>
