@@ -73,7 +73,33 @@ app.controller('DemoCtrl', ['$scope', '$mdDialog', '$element', function($scope,$
         { category: 'universita', name: 'Medicina' },
         { category: 'universita', name: 'Agraria' },
         { category: 'universita', name: 'Filosofia' },
-        { category: 'universita', name: 'Lettere' }
+        { category: 'universita', name: 'Lettere' },
+        { category: 'interessi', name: 'Pesca'},
+        { category: 'interessi', name: 'Calcio'},
+        { category: 'interessi', name: 'Basket'},
+        { category: 'interessi', name: 'Moda'},
+        { category: 'interessi', name: 'Viaggi'},
+        { category: 'interessi', name: 'Politica'},
+        { category: 'interessi', name: 'Scalate'},
+        { category: 'interessi', name: 'Disco'},
+        { category: 'interessi', name: 'Pub'},
+        { category: 'interessi', name: 'Musica'},
+        { category: 'interessi', name: 'Cinema'},
+        { category: 'interessi', name: 'Libri'},
+        { category: 'interessi', name: 'Fotografia'},
+        { category: 'interessi', name: 'Vintage'},
+        { category: 'interessi', name: 'Arte'},
+        { category: 'musica', name: 'Rock'},
+        { category: 'musica', name: 'Ambient'},
+        { category: 'musica', name: 'Elettronica'},
+        { category: 'musica', name: 'Indie'}
+        { category: 'musica', name: 'Classica'},
+        { category: 'musica', name: "Rock '60"},
+        { category: 'musica', name: "Rock '70"},
+        { category: 'musica', name: "Rock '80"},
+        { category: 'musica', name: 'Rap'}
+        
+        
     ];
     $scope.selectedTags = [];
     $scope.printSelectedTags = function printSelectedTags() {
